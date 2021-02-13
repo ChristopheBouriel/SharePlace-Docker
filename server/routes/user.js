@@ -3,11 +3,11 @@ const router = express.Router();
 
 const accessCheck = require('../middleware/rateLimit');
 const userCtrl = require('../controllers/user');
-const profileValidator = require('../middleware/profile-Validator');
-const userNameValidator = require('../middleware/userName-Validator');
+const profileValidation = require('../middleware/profileValidator');
+const userNameValidator = require('../middleware/userNameValidator');
 const auth = require('../middleware/auth');
 
-router.post('/signup', accessCheck.accessCreateAccountLimiter, userNameValidator, profileValidator, userCtrl.testU);
+router.post('/signup', accessCheck.accessCreateAccountLimiter, userNameValidator, profileValidation, userCtrl.testU);
 router.post('/login', accessCheck.accessCreateAccountLimiter, userCtrl.login);
 router.get('/list', accessCheck.seeProfileLimiter, userCtrl.getAllUsers);
 

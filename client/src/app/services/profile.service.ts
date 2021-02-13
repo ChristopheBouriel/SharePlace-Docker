@@ -85,6 +85,7 @@ export class ProfileService {
           .subscribe(
             (response) => {
               this.usersListSubject.next(response);
+              console.log(response);
               resolve()
             },
             (error) => {

@@ -5,7 +5,7 @@ const accessCheck = require('../middleware/rateLimit');
 const publicationCtrl = require('../controllers/publication');
 const auth = require('../middleware/auth');
 
-const publicationValidator = require('../middleware/publication-validator');
+const publicationValidator = require('../middleware/publicationValidator');
 
 router.get('/', accessCheck.getContentLimiter, publicationCtrl.getAllPublications);
 router.get('/:id', accessCheck.getContentLimiter, publicationCtrl.getOnePublication);

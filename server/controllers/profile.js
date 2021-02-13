@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 
 
 exports.seeProfile = (req, res, next) => {
-  connexion.query(`SELECT userName, userId, firstname, lastname, service, email, aboutMe FROM users WHERE userName = ?`, [req.params.userName], (error, result)=>{
+  connexion.query(`SELECT userName, userId, firstname, lastname, serviceName, email, aboutMe FROM users WHERE userName = ?`, [req.params.userName], (error, result)=>{
     if(error) {res.status(500).send(error.sqlMessage)}
     else {
       const token = req.headers.authorization.split(' ')[1];
@@ -34,7 +34,7 @@ exports.modifyProfile = (req, res, next) => {
     const email = xssFilters.inHTMLData(req.body.email);
     const aboutMe = xssFilters.inHTMLData(req.body.aboutMe);
     connexion.query(`UPDATE users SET firstname="${firstname}", lastname="${lastname}", 
-    userName="${userName}", service="${service}", email="${email}", aboutMe="${aboutMe}" 
+    userName="${userName}", serviceName="${service}", email="${email}", aboutMe="${aboutMe}" 
     WHERE userName="${userName}"`, (error, result) => {
         if(error) {res.status(500).send(error.sqlMessage)}
         else {res.status(200).send({message:"Update done"})                                    

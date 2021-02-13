@@ -21,7 +21,7 @@ exports.signup = (req, res, next) => {
             aboutMe: xssFilters.inHTMLData(req.body.aboutMe)
         }; 
         connexion.query(
-            `INSERT INTO users (userId, userName, userPassword, firstname, lastname, service, email, aboutMe) VALUES(
+            `INSERT INTO users (userId, userName, userPassword, firstname, lastname, serviceName, email, aboutMe) VALUES(
                 ?,?,?,?,?,?,?,?)`, [ user.userId, user.userName, user.userPassword, user.firstname, user.lastname, user.service, user.email, user.aboutMe],
                 (error, result) => {
                   if(error) {
@@ -71,7 +71,7 @@ exports.getAllUsers = (req, res, next) => {
   const decodedToken = jwt.verify(token, process.env.DB_TOK);
   const checkUserId = decodedToken.userId;
   if (checkUserId) {
-    connexion.query(`SELECT userName, firstname, lastname, service FROM users ORDER BY userName`, (error, result) => {
+    connexion.query(`SELECT userName, firstname, lastname, serviceName FROM users ORDER BY userName`, (error, result) => {
     if(error) {res.status(500).send(error.sqlMessage)}
     else {res.status(200).send(result);                                  
     }

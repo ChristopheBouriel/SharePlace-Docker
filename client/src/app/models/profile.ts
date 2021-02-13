@@ -2,7 +2,7 @@ export class Profile {
     userName: string;
     firstname: string;
     lastname: string;
-    service: string;
+    serviceName: string;
     email: string;
     aboutMe: string;
 }
