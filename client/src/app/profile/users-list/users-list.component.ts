@@ -11,7 +11,7 @@ export class UsersListComponent implements OnInit {
   @Input() userName: string;
   @Input() firstname: string;
   @Input() lastname: string;
-  @Input() service: string;
+  @Input() serviceName: string;
 
   constructor(private profileService: ProfileService) { }
 

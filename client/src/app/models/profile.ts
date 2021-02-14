@@ -11,5 +11,5 @@ export class ShortProfile {
     userName: string;
     firstname: string;
     lastname: string;
-    service: string;
+    serviceName: string;
 }

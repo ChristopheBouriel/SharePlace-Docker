@@ -63,7 +63,7 @@ export class ProfileFormComponent implements OnInit {
       lastname: [profile.lastname, Validators.required],
       username: [profile.userName, Validators.required],
       password: [null],
-      department: [profile.service, Validators.required],
+      department: [profile.serviceName, Validators.required],
       email: [profile.email],
       aboutMe: [profile.aboutMe],
     });

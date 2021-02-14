@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS sampledb.comments (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT, 
     userId VARCHAR(60) NOT NULL, 
     postId INT NOT NULL, 
-    date_comment DATE, 
+    date_comment DATETIME NOT NULL, 
     content TEXT NOT NULL, 
     userName VARCHAR(40) NOT NULL, 
     modified BOOLEAN DEFAULT 0, 

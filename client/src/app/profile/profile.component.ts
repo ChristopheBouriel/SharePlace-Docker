@@ -125,7 +125,7 @@ export class ProfileComponent implements OnInit {
 
   onGetList() {
       this.profileService.usersListSubject.subscribe(
-      (users: any[]) => {
+      (users: ShortProfile[]) => {
         this.shortProfiles = users;
         if (this.gotUsersList === false) {
           for (let i of users) {

@@ -54,7 +54,7 @@ exports.deleteComment = (req, res, next) => {
                     })
                 }
             })  
-        } else {res.status(401).send({message:"Attention"})}
+        } else {res.status(401).send({message:"You're not the author !"})}
       }
       )    
 };
