@@ -7,7 +7,7 @@ Now, to get the whole app running in containers :
 
 1. Clone this repository
 
-git clone https://github.com/...
+git clone https://github.com/ChristopheBouriel/SharePlace-Docker.git
 
 If you want the building to be faster and don't feel the need to get a phpMyAdmin connected, execute the following instructions :
 	- open the docker-compose.yml
