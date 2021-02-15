@@ -7,6 +7,7 @@ The link to find the site on Internet is https://shareplace4u.netlify.app
 
 Now, to get the whole app running in containers :
 
+0. Maybe that's useless to say that, but you obviously need to have Docker installed on your computer.
 1. Clone this repository
 
 	`git clone https://github.com/ChristopheBouriel/SharePlace-Docker.git`
