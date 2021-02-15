@@ -12,9 +12,12 @@ services:
       <<: *common-variables
       MYSQL_HOST: localhost
       MYSQL_ROOT_PASSWORD: root
-      LANG: C.UTF-8
+      LANG: C.UTF-8 ## Because despite the fact the DB is correctly set,
+                    ## it is not done by default inside the container :
+                    ## during the insertion of the initial datas from sample.sql, for exemple,
+                    ## all the letters with accents are changed 
     ports:
-      - 3307:3306
+      - 3307:3306 ## 3307 is only because I already have a MySQL instance running on my machine and using port 3306
     restart: unless-stopped
     volumes:
       - ./db/sample.sql:/docker-entrypoint-initdb.d/sample.sql
@@ -48,8 +51,11 @@ services:
       - /app/node_modules
     links:
       - mysql
-    command: bash -c 'while !</dev/tcp/mysql/3306; do sleep 1; done; npm start'
-
+    command: bash -c 'while !</dev/tcp/mysql/3306; do sleep 1; done; npm start' ## Because we have to wait for the DB to be ready before starting
+                                                                                ## this container : if not the server will get ERR_CONNECTION_REFUSED,
+                                                                                ## then it will stop, and we'll have to start it again manually.
+                                                                                ## In order to do that, we need first to install a bash inside the container :
+                                                                                ## see the Dockerfile in server's folder (RUN apk update && apk add bash)
   client:
     build: ./client    
     ports:
