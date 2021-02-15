@@ -1,7 +1,7 @@
 # About this repo :
 That was an existing application I decided to dockerize to learn how to use this tool and train myself.
-It has already been deployed using cloud services and you can find the frontend and backend in my repositories. You can also read more about this project in my portfolio : htts://portfolio-christophe-bouriel.netlify.app
-The link to find it on Internet is : shareplace4u.netlify.app 
+It has already been deployed using cloud services and you can find the frontend and backend in my repositories. You can also read more about this project in my [portfolio](htts://portfolio-christophe-bouriel.netlify.app)  
+The link to find it on Internet is [here](shareplace4u.netlify.app)
 
 Now, to get the whole app running in containers :
 
@@ -9,7 +9,7 @@ Now, to get the whole app running in containers :
 
 git clone https://github.com/ChristopheBouriel/SharePlace-Docker.git
 
-If you want the building to be faster and don't feel the need to get a phpMyAdmin connected, execute the following instructions :
+If you want the building to be faster and don't feel the need to get a phpMyAdmin connected, execute the following instructions :  
 	* open the docker-compose.yml  
 	* remove this part of the file :
 		phpmyadmin:
@@ -25,7 +25,7 @@ If you want the building to be faster and don't feel the need to get a phpMyAdmi
     		  restart: always  
 	* save the file
 
-If you want it to be even faster, don't build Angular inside the container and use the dist folder (why I let it in this repo). To do that :
+If you want it to be even faster, don't build Angular inside the container and use the dist folder (why I let it in this repo). To do that :  
 	* enter the client folder and open the Dockerfile  
 	* suppress everything and replace it with the following lines :
 		FROM nginx:1.17.1-alpine
