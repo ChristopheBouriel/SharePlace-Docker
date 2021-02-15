@@ -22,6 +22,7 @@ services:
     volumes:
       - ./db/sample.sql:/docker-entrypoint-initdb.d/sample.sql
 
+## Part to remove if you don't want phpMyAdmin
   phpmyadmin:
     depends_on:
       - mysql
@@ -33,6 +34,7 @@ services:
     ports:
       - 8080:80
     restart: always
+## End of part to remove
 
   server:
     build: ./server
