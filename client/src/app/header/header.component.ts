@@ -61,6 +61,7 @@ export class HeaderComponent implements OnInit {
 
   onSeeMine() {
     this.profileService.seeMine = true;
+    this.profileService.searchingSubject.next(false);
   }
 
   onLogout() {
