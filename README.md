@@ -11,8 +11,8 @@ Now, to get the whole app running in containers :
 
 	`git clone https://github.com/ChristopheBouriel/SharePlace-Docker.git`
 
-	If you want the building to be faster and don't feel the need to get a phpMyAdmin connected, execute the 	following instructions :  
-	* open the docker-compose.yml
+	If you want the building to be faster and don't feel the need to get a phpMyAdmin connected, execute the following instructions :  
+	* open the docker-compose.yml file
 	* remove this part of the file :
 	
 			phpmyadmin:  
@@ -29,7 +29,7 @@ Now, to get the whole app running in containers :
 	* save the file
 
 	If you want it to be even faster, don't build Angular inside the container and use the dist folder instead. To do so :  
-	* enter the client folder and open the Dockerfile
+	* enter the client folder and open the file named Dockerfile
 	* suppress everything and replace it with the following lines :
 	
 			FROM nginx:1.17.1-alpine  
@@ -44,7 +44,7 @@ Now, to get the whole app running in containers :
 `docker-compose up -d`  
 	If you see an error at step 7/10 which stop the process, simply type again the same command :  
 	`docker-compose up -d`  
-	That will start again where the process was at, and terminate it.
+	That will start again where the process was at, and terminate it.  
 	*This is likely a problem of timeout because my machine is not really powerfull... but maybe yours too.*
 
 3. Then, just go to localhost:4200 in your browser and try the app.
