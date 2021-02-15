@@ -14,26 +14,26 @@ Now, to get the whole app running in containers :
 	If you want the building to be faster and don't feel the need to get a phpMyAdmin connected, execute the 	following instructions :  
 	* open the docker-compose.yml
 	* remove this part of the file :  
-		`phpmyadmin:  `
-    		  `depends_on:  `
-		    - mysql  
-    		  image: phpmyadmin/phpmyadmin  
-    		  environment:  
-      		    PMA_HOST: mysql  
-		  links:  
- 		    - mysql:mysql  
-  		  ports:  
-   		    - 8080:80  
-    		  restart: always
+			phpmyadmin:  
+			  depends_on:  
+			    - mysql  
+			  image: phpmyadmin/phpmyadmin  
+			  environment:  
+			    PMA_HOST: mysql  
+			  links:  
+			    - mysql:mysql  
+			  ports:  
+			    - 8080:80  
+			  restart: always
 	* save the file
 
 	If you want it to be even faster, don't build Angular inside the container and use the dist folder (why I 	let it in this repo). To do that :  
 	* enter the client folder and open the Dockerfile
 	* suppress everything and replace it with the following lines :
-		FROM nginx:1.17.1-alpine
-		COPY nginx.conf /etc/nginx/nginx.conf
-		COPY dist/Front-end /usr/share/nginx/html
-		EXPOSE 80
+		FROM nginx:1.17.1-alpine  
+		COPY nginx.conf /etc/nginx/nginx.conf  
+		COPY dist/Front-end /usr/share/nginx/html  
+		EXPOSE 80  
 	* save the file
 	* edit the .dockerignore file and delete "client"
 	* save the file
@@ -50,6 +50,7 @@ If you see an error at step 7/10 which stop the process, simply type again the s
 	If you don't want to create a profile, you can log in with this one :  
 	* Username --> Userix
 	* Password --> evaluatapp
+	
 	If you want to try the moderator profil with its specific functionalities :  
 	* Username --> Moderator
 	* Password --> moderate
