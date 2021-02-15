@@ -1,5 +1,5 @@
 # About this repo :
-That was an existing application I decided to dockerize to learn how to use this tool and train myself.  
+This was an existing application I decided to dockerize to learn how to use this tool and train myself.  
 It has already been deployed using cloud services and you can find the [frontend](https://github.com//ChristopheBouriel/SharePlace-frontend-deploy) and [backend](https://github.com//ChristopheBouriel/SharePlace-backend-deploy) in my repositories. 
 You can also read more about this project in my portfolio :  
 https://portfolio-christophe-bouriel.netlify.app  
@@ -7,7 +7,8 @@ The link to find the site on Internet is https://shareplace4u.netlify.app
 
 Now, to get the whole app running in containers :
 
-0. Maybe that's useless to say, but you obviously need to have Docker installed on your computer.
+0. Maybe that's useless to say, but you obviously need to have Docker installed on your computer.  
+
 1. Clone this repository
 
 	`git clone https://github.com/ChristopheBouriel/SharePlace-Docker.git`
