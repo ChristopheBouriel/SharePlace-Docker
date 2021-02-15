@@ -9,12 +9,12 @@ Now, to get the whole app running in containers :
 
 1. Clone this repository
 
-	git clone https://github.com/ChristopheBouriel/SharePlace-Docker.git
+	`git clone https://github.com/ChristopheBouriel/SharePlace-Docker.git`
 
 	If you want the building to be faster and don't feel the need to get a phpMyAdmin connected, execute the 	following instructions :  
 	* open the docker-compose.yml
-	* remove this part of the file :
-		phpmyadmin:
+	* remove this part of the file :  
+		`phpmyadmin:
     		  depends_on:
 		    - mysql
     		  image: phpmyadmin/phpmyadmin
@@ -24,7 +24,7 @@ Now, to get the whole app running in containers :
  		    - mysql:mysql
   		  ports:
    		    - 8080:80
-    		  restart: always
+    		  restart: always`
 	* save the file
 
 	If you want it to be even faster, don't build Angular inside the container and use the dist folder (why I 	let it in this repo). To do that :  
@@ -39,7 +39,7 @@ Now, to get the whole app running in containers :
 	* save the file
 
 2. In your terminal, enter the root folder of the project and just type the command :
-docker-compose up -d
+`docker-compose up -d`
 
 If you see an error at step 7/10 which stop the process, simply type again the same command : 
 	docker-compose up -d
