@@ -59,6 +59,8 @@ Now, to get the whole app running in containers :
 
 	If you decided to install the phpMyAdmin, you can find the panel at localhost:8080 in your browser (the DB 	name is "sampledb")
 
-4. In the end, if you want to clear up everything* after testing, type the command :  
+4. In the end, to stop after testing, type the command :  
+	`docker-compose down`  
+	If you want to stop and then clear up everything*, type the command :  
 	`docker-compose down --rmi all --volume`  
-	Note that you still have to remove node and nginx images manually.
+	*Note that you still have to remove node and nginx images manually.
