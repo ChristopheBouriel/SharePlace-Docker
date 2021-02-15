@@ -6,7 +6,6 @@ https://portfolio-christophe-bouriel.netlify.app
 The link to find it on Internet is https://shareplace4u.netlify.app
 
 Now, to get the whole app running in containers :
-
 1. Clone this repository
 
 	`git clone https://github.com/ChristopheBouriel/SharePlace-Docker.git`
