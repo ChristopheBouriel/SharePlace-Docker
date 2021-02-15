@@ -44,7 +44,8 @@ Now, to get the whole app running in containers :
 `docker-compose up -d`  
 	If you see an error at step 7/10 which stop the process, simply type again the same command :  
 	`docker-compose up -d`  
-	That will start again where the process was at, and terminate it -- likely a problem of timeout because my 	machine is not really powerfull... but maybe yours too.
+	That will start again where the process was at, and terminate it.
+	*This is likely a problem of timeout because my machine is not really powerfull... but maybe yours too.*
 
 3. Then, just go to localhost:4200 in your browser and try the app.
 
