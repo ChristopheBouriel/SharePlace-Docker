@@ -14,17 +14,17 @@ Now, to get the whole app running in containers :
 	If you want the building to be faster and don't feel the need to get a phpMyAdmin connected, execute the 	following instructions :  
 	* open the docker-compose.yml
 	* remove this part of the file :  
-		`phpmyadmin:
-    		  depends_on:
-		    - mysql
-    		  image: phpmyadmin/phpmyadmin
-    		  environment:
-      		    PMA_HOST: mysql
-		  links:
- 		    - mysql:mysql
-  		  ports:
-   		    - 8080:80
-    		  restart: always`
+		`phpmyadmin:  
+    		  depends_on:  
+		    - mysql  
+    		  image: phpmyadmin/phpmyadmin  
+    		  environment:  
+      		    PMA_HOST: mysql  
+		  links:  
+ 		    - mysql:mysql  
+  		  ports:  
+   		    - 8080:80  
+    		  restart: always`  
 	* save the file
 
 	If you want it to be even faster, don't build Angular inside the container and use the dist folder (why I 	let it in this repo). To do that :  
