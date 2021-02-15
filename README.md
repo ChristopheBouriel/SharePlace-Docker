@@ -1,6 +1,6 @@
 # About this repo :
 That was an existing application I decided to dockerize to learn how to use this tool and train myself.
-It has already been deployed using cloud services and you can find the frontend and backend in my repositories. You can also read more about this project in my [portfolio](htts://portfolio-christophe-bouriel.netlify.app)  
+It has already been deployed using cloud services and you can find the frontend and backend in my repositories. You can also read more about this project in my [portfolio](portfolio-christophe-bouriel.netlify.app)  
 The link to find it on Internet is [here](shareplace4u.netlify.app)
 
 Now, to get the whole app running in containers :
