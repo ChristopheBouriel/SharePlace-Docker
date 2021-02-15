@@ -28,7 +28,7 @@ Now, to get the whole app running in containers :
 			  restart: always
 	* save the file
 
-	If you want it to be even faster, don't build Angular inside the container and use the dist folder (why I 	let it in this repo). To do so :  
+	If you want it to be even faster, don't build Angular inside the container and use the dist folder instead. To do so :  
 	* enter the client folder and open the Dockerfile
 	* suppress everything and replace it with the following lines :
 	
@@ -44,7 +44,7 @@ Now, to get the whole app running in containers :
 `docker-compose up -d`  
 	If you see an error at step 7/10 which stop the process, simply type again the same command :  
 	`docker-compose up -d`  
-	That will start again where the process was at, and terminate it (likely a problem of timeout because my 	machine is not really powerfull... but maybe yours too)
+	That will start again where the process was at, and terminate it -- likely a problem of timeout because my 	machine is not really powerfull... but maybe yours too.
 
 3. Then, just go to localhost:4200 in your browser and try the app.
 
