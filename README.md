@@ -14,8 +14,8 @@ Now, to get the whole app running in containers :
 	If you want the building to be faster and don't feel the need to get a phpMyAdmin connected, execute the 	following instructions :  
 	* open the docker-compose.yml
 	* remove this part of the file :  
-		`phpmyadmin:  
-    		  depends_on:  
+		`phpmyadmin:  `
+    		  `depends_on:  `
 		    - mysql  
     		  image: phpmyadmin/phpmyadmin  
     		  environment:  
@@ -24,7 +24,7 @@ Now, to get the whole app running in containers :
  		    - mysql:mysql  
   		  ports:  
    		    - 8080:80  
-    		  restart: always`  
+    		  restart: always
 	* save the file
 
 	If you want it to be even faster, don't build Angular inside the container and use the dist folder (why I 	let it in this repo). To do that :  
@@ -42,20 +42,20 @@ Now, to get the whole app running in containers :
 `docker-compose up -d`
 
 If you see an error at step 7/10 which stop the process, simply type again the same command : 
-	docker-compose up -d
+`docker-compose up -d`  
 	That will start again where the process was at, and terminate it (likely a problem of timeout because my 	machine is not really powerfull... but maybe yours too)
 
 3. Then, just go to localhost:4200 in your browser and try the app.
 
-	If you don't want to create a profile, you can log in with this one:  
-	* Username --> Userix  
-	* Password --> evaluatapp  
-	If you want to try the moderator profil with its specific functionalities:  
-	* Username --> Moderator  
-	* Password --> moderate  
+	If you don't want to create a profile, you can log in with this one :  
+	* Username --> Userix
+	* Password --> evaluatapp
+	If you want to try the moderator profil with its specific functionalities :  
+	* Username --> Moderator
+	* Password --> moderate
 
 	If you decided to install the phpMyAdmin, you can find the panel at localhost:8080 in your browser (the DB 	name is "sampledb")
 
 4. In the end, if you want to clear up everything* after testing, type the command :  
-	docker-compose down --rmi all --volume  
+	`docker-compose down --rmi all --volume`  
 	Note that you still have to remove node and nginx images manually.
