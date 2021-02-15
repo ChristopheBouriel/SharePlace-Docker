@@ -32,12 +32,12 @@ Now, to get the whole app running in containers :
 	* enter the client folder and open the Dockerfile
 	* suppress everything and replace it with the following lines :
 	
-		FROM nginx:1.17.1-alpine  
-		COPY nginx.conf /etc/nginx/nginx.conf  
-		COPY dist/Front-end /usr/share/nginx/html  
-		EXPOSE 80  
+			FROM nginx:1.17.1-alpine  
+			COPY nginx.conf /etc/nginx/nginx.conf  
+			COPY dist/Front-end /usr/share/nginx/html  
+			EXPOSE 80  
 	* save the file
-	* edit the .dockerignore file and delete "client"
+	* edit the .dockerignore file and delete the word "client"
 	* save the file
 
 2. In your terminal, enter the root folder of the project and just type the command :
