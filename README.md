@@ -40,7 +40,7 @@ Now, to get the whole app running in containers :
 	* edit the .dockerignore file and delete the word "client"
 	* save the file
 
-2. In your terminal, enter the root folder of the project and just type the command :  
+2. In your terminal, enter the root folder of the project if you're not already there, and just type the command :  
 `docker-compose up -d`  
 	If you see an error at step 7/10 which stop the process, simply type again the same command :  
 	`docker-compose up -d`  
