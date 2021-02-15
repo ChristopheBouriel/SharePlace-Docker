@@ -10,8 +10,8 @@ Now, to get the whole app running in containers :
 git clone https://github.com/ChristopheBouriel/SharePlace-Docker.git
 
 If you want the building to be faster and don't feel the need to get a phpMyAdmin connected, execute the following instructions :
-	- open the docker-compose.yml
-	- remove this part of the file :
+	* open the docker-compose.yml
+	* remove this part of the file :
 		phpmyadmin:
     		  depends_on:
 		    - mysql
@@ -23,18 +23,18 @@ If you want the building to be faster and don't feel the need to get a phpMyAdmi
   		  ports:
    		    - 8080:80
     		  restart: always
-	- save the file
+	* save the file
 
 If you want it to be even faster, don't build Angular inside the container and use the dist folder (why I let it in this repo). To do that :
-	- enter the client folder and open the Dockerfile
-	- suppress everything and replace it with the following lines :
+	* enter the client folder and open the Dockerfile
+	* suppress everything and replace it with the following lines :
 		FROM nginx:1.17.1-alpine
 		COPY nginx.conf /etc/nginx/nginx.conf
 		COPY dist/Front-end /usr/share/nginx/html
 		EXPOSE 80
-	- save the file
-	- edit the .dockerignore file and delete "client"
-	- save the file 
+	* save the file
+	* edit the .dockerignore file and delete "client"
+	* save the file 
 
 2. In your terminal, enter the root folder of the project and just type the command :
 docker-compose up -d
@@ -55,4 +55,4 @@ If you decided to install the phpMyAdmin, you can find the panel at localhost:80
 
 4. In the end, if you want to clear up everything* after testing, type the command :
 docker-compose down --rmi all --volume
-* You have to remove node and nginx manually
+Note that you still have to remove node and nginx images manually.
