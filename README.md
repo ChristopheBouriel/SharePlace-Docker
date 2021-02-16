@@ -59,7 +59,7 @@ Now, to get the whole app running in containers :
 	* Username --> Moderator
 	* Password --> moderate
 
-	If you decided to install the phpMyAdmin, you can find the panel at localhost:8080 in your browser (the DB name is "sampledb") :  
+	If you've decided to install the phpMyAdmin, you can find the panel at localhost:8080 in your browser (the DB name is "sampledb") :  
 	* Username --> Root
 	* Password --> Root
 
